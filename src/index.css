@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-cream: #EDE9DE;
+  --color-brand-creambg: #FAF7EE;
+  --color-brand-pink: #F8A5C2;
+  --color-brand-pinkdark: #E781A5;
+  --color-brand-dark: #1C1A1A;
+  --color-brand-sage: #C3DCB5;
+  --color-brand-lilac: #DEC6F5;
+  --color-brand-yellow: #F9DF7B;
+
+  --font-serif-hero: "Instrument Serif", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    background-color: #1C1A1A;
+    color: #1C1A1A;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.font-serif-hero {
+  font-family: var(--font-serif-hero);
+  letter-spacing: -0.025em;
+}
+
+.retro-border {
+  border: 1.5px solid #1C1A1A;
+}
+
+.retro-border-thick {
+  border: 2px solid #1C1A1A;
+}
+
+.tag-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.85rem;
+  border-radius: 9999px;
+  border: 1.5px solid #1C1A1A;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.writing-sideways {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+.retro-shadow-sm {
+  box-shadow: 2px 2px 0px #1C1A1A;
+}
+
+.retro-shadow-md {
+  box-shadow: 4px 4px 0px #1C1A1A;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
